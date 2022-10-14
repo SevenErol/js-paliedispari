@@ -40,28 +40,21 @@ function sum (numberOne, numberTwo) {
 }
 
 // user choice plus pc choice
-const result = sum(pcChoice, userChoice);
+const result = sum(pcChoice, userNumber);
+console.log(result)
 
 // check for winning
-if(result % 2 === 0) {
+if(result % 2 === 0 && userChoice === "even") {
 
-    if(userChoice.toLowerCase === "even") {
-
-        visualElement.innerHTML = "Player wins!"
-
-    } else {
-
-        visualElement.innerHTML = "PC wins!"
-    }
+    visualElement.innerHTML = "Player wins!";
    
-} else if (result % 2 !== 0) {
+} else if (result % 2 !== 0 && userChoice === "odd") {
 
-    if (userChoice.toLowerCase === "odd") {
+    visualElement.innerHTML = "Player wins!";
 
-        visualElement.innerHTML = "Player wins!"
+} else {
 
-    } else {
-
-        visualElement.innerHTML = "PC wins!"
-    }
+    visualElement.innerHTML = "PC wins!";
+   
 }
+
